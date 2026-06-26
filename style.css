@@ -1,0 +1,263 @@
+/* Genel Sıfırlama ve Font Ayarları */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #eef2f5; 
+    color: #2c3e50;
+    overflow-x: hidden;
+}
+
+/* Tam Ekran Bölümler (Ahşap Logolar İçin) */
+.page-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+}
+
+.logo-page {
+    background-color: #150d08; 
+}
+
+.logo-wrapper img {
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* --- AHŞAP LOGO ÜSTÜ YAZILI LOGO VE PORTRE ALANI --- */
+.text-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f3e5d8; 
+    margin-bottom: 40px;
+    font-family: 'Georgia', serif; 
+}
+
+.vintage-logo {
+    height: 85px; 
+    width: auto;
+    margin-right: 20px;
+    filter: brightness(0) invert(0.9) sepia(0.1) hue-rotate(350deg);
+}
+
+.text-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    margin-right: 15px;
+}
+
+.text-cetin {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.text-slogan {
+    font-size: 16px;
+    font-style: italic;
+    opacity: 0.85;
+    margin-top: 5px;
+}
+
+.text-divider {
+    font-size: 65px;
+    font-weight: 300;
+    opacity: 0.5;
+    margin: 0 10px;
+    line-height: 1;
+}
+
+.text-right {
+    font-size: 42px;
+    font-weight: normal;
+    margin-left: 15px;
+    letter-spacing: 1px;
+}
+
+/* ANA MENÜ ÇERÇEVESİ (BEYAZ SAYFA) */
+.main-menu-container {
+    position: relative; 
+    max-width: 1200px;
+    margin: 40px auto; 
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    padding-bottom: 110px; 
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08); 
+}
+
+/* İç Logolar (Beyaz Çerçevenin Köşeleri) */
+.inner-logo {
+    position: absolute;
+    width: 110px;
+    height: auto;
+    z-index: 10;
+    opacity: 0.85;
+}
+
+.top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.bottom-right {
+    bottom: 20px;
+    right: 20px; 
+}
+
+/* Menü İçerik Boşlukları */
+.menu-content-padding {
+    padding: 80px 40px 50px 40px; 
+}
+
+/* Menü Sayfası En Üst Yazı (Dağ Restoran) */
+.menu-top-brand {
+    text-align: center;
+    color: #2c3e50; 
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Menü Başlıkları (Kesikli Çizgi Üstte) */
+.menu-header-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    border-top: 2px dashed #b2bec3; 
+    padding-top: 30px; 
+}
+
+.main-page-title {
+    color: #2b6b84;
+    font-size: 36px;
+    letter-spacing: 4px;
+    display: inline-block;
+}
+
+.category-title {
+    color: #2b6b84;
+    font-size: 24px;
+    margin: 20px 0;
+    border-bottom: 2px solid #eef2f5;
+    padding-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.en-cat {
+    font-size: 14px;
+    color: #7f8c8d;
+    font-weight: normal;
+}
+
+/* Çift Sütun Izgara Yapısı */
+.menu-grid {
+    display: grid;
+    grid-template-columns: 100%; 
+    gap: 40px;
+    width: 100%;
+}
+
+.menu-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Menü Ürün Kartları (Düz Mavi Alt Çizgi) */
+.menu-item {
+    border-bottom: 1px solid #2b6b84; 
+    padding-bottom: 15px;
+}
+
+.menu-item.compact {
+    padding-bottom: 8px;
+    margin-bottom: -5px;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.item-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e272e;
+}
+
+.en-title {
+    font-size: 13px;
+    color: #7f8c8d;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.item-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2b6b84;
+    white-space: nowrap;
+    background-color: #f8f9fa;
+    padding: 3px 12px;
+    border-radius: 6px;
+    border: 1px solid #e1e8ed;
+}
+
+/* Açıklama Kısımları */
+.item-desc {
+    font-size: 13.5px;
+    color: #485460;
+    line-height: 1.5;
+}
+
+.item-desc.english {
+    color: #808e9b;
+    font-style: italic;
+    margin-top: 4px;
+}
+
+/* YATAY BANNER */
+.horizontal-banner {
+    width: 100%; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+}
+
+.horizontal-banner img {
+    width: 100%;
+    height: auto; 
+    display: block;
+}
+
+/* 📱 RESPONSIVE (Masaüstü/Tablet Çift Sütun ve Yazı Küçültme) */
+@media (max-width: 768px) {
+    .text-logo-container {
+        transform: scale(0.65);
+        margin-bottom: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
