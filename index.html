@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Çetin Dağ Restaurant - QR Menü</title>
+    
+    <link rel="icon" href="logo-Photoroom.png" type="image/png">
+    <link rel="apple-touch-icon" href="logo-Photoroom.png">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- 1. SAYFA: Ahşap Logo ve Yazılı Başlık -->
     <section class="page-section logo-page" id="welcome-page">
         <div class="text-logo-container">
             <img src="logo-Photoroom.png" alt="Dağ Restoran Since 1992" class="vintage-logo">
@@ -25,31 +28,25 @@
         </div>
     </section>
 
-    <!-- ANA MENÜ ÇERÇEVESİ (Beyaz Alan) -->
     <div class="main-menu-container">
         
-        <!-- Çerçeve İçi Logolar (Sol Üst ve Sağ Alt) -->
         <img src="beyaz-logo.png" class="inner-logo top-left" alt="Senin Etin Senin Köften">
         <img src="beyaz-logo.png" class="inner-logo bottom-right" alt="Senin Etin Senin Köften">
 
-        <!-- 2. SAYFA: Izgaralar -->
         <div class="menu-content-padding">
             
-            <!-- ÜST MARKA YAZISI -->
             <div class="menu-top-brand">Dağ Restoran</div>
 
-            <!-- KESİKLİ ÇİZGİ VE BAŞLIK -->
             <div class="menu-header-container">
                 <h1 class="main-page-title">IZGARALAR</h1>
             </div>
 
             <div class="menu-grid">
-                <!-- Sol Sütun -->
                 <div class="menu-column">
                     <div class="menu-item">
                         <div class="menu-item-header">
                             <div class="item-title">Dağ Köftesi <span class="en-title">/ Mountain Meatballs</span></div>
-                            <div class="item-price">600 ₺</div>
+                            <div class="item-price" id="price-dag-koftesi">...</div>
                         </div>
                         <div class="item-desc">%100 dana etinden hazırlanan, ev köftesi tadında 300 gr doyurucu lezzet. (Ezme, yoğurt, turşu ve çiğ köfte eşliğinde servis edilir.)</div>
                         <div class="item-desc english">300 gr of homemade style meatballs, made from 100% beef. A satisfying treat. (Served with mashed potatoes, yogurt, pickles, and raw meatballs.)</div>
@@ -58,7 +55,7 @@
                     <div class="menu-item">
                         <div class="menu-item-header">
                             <div class="item-title">Çetin Bonfile <span class="en-title">/ Cetin Beef Tenderloin</span></div>
-                            <div class="item-price">950 ₺</div>
+                            <div class="item-price" id="price-cetin-bonfile">...</div>
                         </div>
                         <div class="item-desc">Restoranımızın imza yemeği; yumuşacık 4 parça seçme bonfile. (Ezme, yoğurt, turşu ve çiğ köfte eşliğinde servis edilir.)</div>
                         <div class="item-desc english">Our restaurant's signature dish: four incredibly tender, hand selected pieces of beef tenderloin. (Served with mashed potatoes, yogurt, pickles, and raw meatballs.)</div>
@@ -67,7 +64,7 @@
                     <div class="menu-item">
                         <div class="menu-item-header">
                             <div class="item-title">Dağ Sucuğu <span class="en-title">/ Mountain Sausage</span></div>
-                            <div class="item-price">500 ₺</div>
+                            <div class="item-price" id="price-dag-sucugu">...</div>
                         </div>
                         <div class="item-desc">Baharatıyla iştah açan, ızgarada pişmiş 5 parça özel kasap sucuğu. (Ezme, yoğurt, turşu ve çiğ köfte eşliğinde servis edilir.)</div>
                         <div class="item-desc english">Five pieces of specially prepared butcher's sausage, grilled and flavored to whet the appetite. (Served with mashed tomatoes, yogurt, pickles, and raw meatballs.)</div>
@@ -76,7 +73,7 @@
                     <div class="menu-item">
                         <div class="menu-item-header">
                             <div class="item-title">Tavada Alabalık <span class="en-title">/ Pan-fried Trout</span></div>
-                            <div class="item-price">500 ₺</div>
+                            <div class="item-price" id="price-tavada-alabalik">...</div>
                         </div>
                         <div class="item-desc">Kılçığından ayıklanmış taze Erzincan alabalığı; roka ve soğan eşliğinde servis edilir. (Ezme, yoğurt, turşu ve çiğ köfte eşliğinde servis edilir.)</div>
                         <div class="item-desc english">Freshly boned Erzincan trout, is served with arugula and onions. (It is also served with mashed potatoes, yogurt, pickles, and raw meatballs.)</div>
@@ -85,7 +82,7 @@
                     <div class="menu-item">
                         <div class="menu-item-header">
                             <div class="item-title">Antrikot <span class="en-title">/ Ribeye Steak</span></div>
-                            <div class="item-price">950 ₺</div>
+                            <div class="item-price" id="price-antrikot">...</div>
                         </div>
                         <div class="item-desc">Mükemmel yağ dengesine sahip 4 parça ızgara antrikot. (Ezme, yoğurt, turşu ve çiğ köfte eşliğinde servis edilir.)</div>
                         <div class="item-desc english">Four pieces of grilled ribeye steak with a perfect balance of fat. (Served with mashed potatoes, yogurt, pickles, and raw meatballs.)</div>
@@ -94,19 +91,18 @@
                     <div class="menu-item">
                         <div class="menu-item-header">
                             <div class="item-title">Tavuk Çocuk Menü <span class="en-title">/ Chicken Kids Menu</span></div>
-                            <div class="item-price">450 ₺</div>
+                            <div class="item-price" id="price-tavuk-cocuk">...</div>
                         </div>
                         <div class="item-desc">Çocuklar için 2 parça talex tavuk ve yanında çıtır patates cipsi. (Ezme, yoğurt, turşu ve çiğ köfte eşliğinde servis edilir.)</div>
                         <div class="item-desc english">For children: 2 pieces of Talex chicken and crispy potato chips on the side. (Served with mashed potatoes, yogurt, pickles, and raw meatballs.)</div>
                     </div>
                 </div>
 
-                <!-- Sağ Sütun -->
                 <div class="menu-column">
                     <div class="menu-item">
                         <div class="menu-item-header">
                             <div class="item-title">Talex Tavuk Izgara <span class="en-title">/ Talex Grilled Chicken</span></div>
-                            <div class="item-price">600 ₺</div>
+                            <div class="item-price" id="price-talex-tavuk">...</div>
                         </div>
                         <div class="item-desc">Erzincan'ın özel lezzeti, lokum kıvamında 3 büyük parça et. (Ezme, yoğurt, turşu ve çiğ köfte eşliğinde servis edilir.)</div>
                         <div class="item-desc english">Erzincan's special delicacy: three large pieces of meat with a tender, melt-in-your-mouth texture (Served with mashed potatoes, yogurt, pickles, and raw meatballs.)</div>
@@ -115,7 +111,7 @@
                     <div class="menu-item">
                         <div class="menu-item-header">
                             <div class="item-title">Kuzu Pirzola <span class="en-title">/ Lamb Chops</span></div>
-                            <div class="item-price">950 ₺</div>
+                            <div class="item-price" id="price-kuzu-pirzola">...</div>
                         </div>
                         <div class="item-desc">Özenle seçilmiş, ateşte pişmiş 4 parça kuzu pirzola. (Ezme, yoğurt, turşu ve çiğ köfte eşliğinde servis edilir.)</div>
                         <div class="item-desc english">Four carefully selected, fire-cooked lamb chops. (Served with mashed potatoes, yogurt, pickles, and raw meatballs.)</div>
@@ -124,7 +120,7 @@
                     <div class="menu-item">
                         <div class="menu-item-header">
                             <div class="item-title">Karışık Ergan Tabağı <span class="en-title">/ Mixed Plate</span></div>
-                            <div class="item-price">800 ₺</div>
+                            <div class="item-price" id="price-karisik-ergan">...</div>
                         </div>
                         <div class="item-desc">Zengin içerikli tadım tabağı; 1 Tavuk, 2 Köfte, 2 Sucuk ve 1 parça Et. (Ezme, yoğurt, turşu ve çiğ köfte eşliğinde servis edilir.)</div>
                         <div class="item-desc english">A rich tasting platter containing 1 chicken, 2 meatballs, 2 sausages, and 1 piece of meat. (Served with dips, yogurt, pickles, and raw meatballs.)</div>
@@ -133,7 +129,7 @@
                     <div class="menu-item">
                         <div class="menu-item-header">
                             <div class="item-title">Kanat Izgara <span class="en-title">/ Grilled Chicken Wings</span></div>
-                            <div class="item-price">650 ₺</div>
+                            <div class="item-price" id="price-kanat-izgara">...</div>
                         </div>
                         <div class="item-desc">Özel marine edilmiş, ızgarada nar gibi kızarmış 8 parça tavuk kanadı. (Ezme, yoğurt, turşu ve çiğ köfte eşliğinde servis edilir.)</div>
                         <div class="item-desc english">Eight specially marinated, grilled chicken wings, golden brown like pomegranates. (Served with mashed potatoes, yogurt, pickles, and raw meatballs.)</div>
@@ -142,7 +138,7 @@
                     <div class="menu-item">
                         <div class="menu-item-header">
                             <div class="item-title">Kayakçı Menüsü <span class="en-title">/ Skier's Menu</span></div>
-                            <div class="item-price">--- ₺</div>
+                            <div class="item-price" id="price-kayakci">...</div>
                         </div>
                         <div class="item-desc">Mini burgerler 2 adet köfte 2 adet sucuk patates cipsi ile servis edilir. (Ezme, yoğurt, turşu ve çiğ köfte eşliğinde servis edilir.)</div>
                         <div class="item-desc english">Mini burgers are served with 2 patties, 2 slices of sausage, and french fries. (Served with dips, yogurt, pickles, and raw meatballs.)</div>
@@ -151,152 +147,160 @@
                     <div class="menu-item">
                         <div class="menu-item-header">
                             <div class="item-title">Köfte Çocuk Menü <span class="en-title">/ Meatball Kids Menu</span></div>
-                            <div class="item-price">450 ₺</div>
+                            <div class="item-price" id="price-kofte-cocuk">...</div>
                         </div>
                         <div class="item-desc">3 parça ev köftesi ve yanında çıtır patates cipsi. (Ezme, yoğurt, turşu ve çiğ köfte eşliğinde servis edilir.)</div>
                         <div class="item-desc english">Three portions of homemade meatballs with crispy potato chips. (Served with mashed potatoes, yogurt, pickles, and raw meatballs.)</div>
                     </div>
                 </div>
+
+                <div class="section-gallery">
+                    <img src="tavuk.jpg" alt="Tavuk Izgara" class="oval-img">
+                    <img src="karisikergantabagi.jpg" alt="Karışık Ergan Tabağı" class="oval-img">
+                    <img src="kuzupirzola.jpg" alt="Kuzu Pirzola" class="oval-img">
+                </div>
+
             </div>
         </div>
 
-        <!-- 1. YATAY BANNER GÖRSELİ -->
         <div class="horizontal-banner">
             <img src="izgara-banner.jpg" alt="Izgara Lezzetleri">
         </div>
 
-        <!-- 3. SAYFA: Mezeler, Çorbalar ve İçecekler -->
         <div class="menu-content-padding">
             <div class="menu-grid">
-                <!-- Sol Bölüm -->
                 <div class="menu-column">
                     <h2 class="category-title">MEZELER <span class="en-cat">/ Appetizers</span></h2>
                     
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Mevsim Salatası <span class="en-title">/ Seasonal Salad</span></div>
-                            <div class="item-price">100 ₺</div>
+                            <div class="item-price" id="price-mevsim-salata">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Acılı Ezme <span class="en-title">/ Spicy Paste</span></div>
-                            <div class="item-price">100 ₺</div>
+                            <div class="item-price" id="price-acili-ezme">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Dağ Salatası <span class="en-title">/ Mountain Salad</span></div>
-                            <div class="item-price">200 ₺</div>
+                            <div class="item-price" id="price-dag-salatasi">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Süzme Yoğurt <span class="en-title">/ Strained Yogurt</span></div>
-                            <div class="item-price">100 ₺</div>
+                            <div class="item-price" id="price-suzme-yogurt">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Çiğköfte <span class="en-title">/ Raw Meatballs</span></div>
-                            <div class="item-price">100 ₺</div>
+                            <div class="item-price" id="price-cigkofte">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Turşu <span class="en-title">/ Pickles</span></div>
-                            <div class="item-price">--- ₺</div>
+                            <div class="item-price" id="price-tursu">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Piyaz Salatası <span class="en-title">/ Piyaz Salad</span></div>
-                            <div class="item-price">100 ₺</div>
+                            <div class="item-price" id="price-piyaz">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Barbunya Pilaki <span class="en-title">/ Broad Bean Stew</span></div>
-                            <div class="item-price">150 ₺</div>
+                            <div class="item-price" id="price-barbunya">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Patates Cips <span class="en-title">/ Potato Chips</span></div>
-                            <div class="item-price">150 ₺</div>
+                            <div class="item-price" id="price-cips">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Tulum Peyniri <span class="en-title">/ Tulum Cheese</span></div>
-                            <div class="item-price">100 ₺</div>
+                            <div class="item-price" id="price-tulum">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Tereyağı <span class="en-title">/ Butter</span></div>
-                            <div class="item-price">100 ₺</div>
+                            <div class="item-price" id="price-tereyagi">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Sumaklı Soğan Salatası <span class="en-title">/ Sumac Onion Salad</span></div>
-                            <div class="item-price">İkram</div>
+                            <div class="item-price" id="price-sumakli-sogan">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Kaşarlı Mantar <span class="en-title">/ Mushrooms with Cheese</span></div>
-                            <div class="item-price">350 ₺</div>
+                            <div class="item-price" id="price-kasarli-mantar">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Günün Mezesi <span class="en-title">/ Appetizer of the Day</span></div>
-                            <div class="item-price">100 ₺</div>
+                            <div class="item-price" id="price-gunun-mezesi">...</div>
                         </div>
+                    </div>
+
+                    <div class="section-gallery column-gallery">
+                        <img src="mezelerana.jpg" alt="Ana Mezeler" class="oval-img">
+                        <img src="mezeyan.jpg" alt="Mezeler Yan" class="oval-img">
                     </div>
 
                     <h2 class="category-title" style="margin-top: 30px;">SICAK İÇECEKLER <span class="en-cat">/ Hot Drinks</span></h2>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Sahlep <span class="en-title">/ Salep</span></div>
-                            <div class="item-price">--- ₺</div>
+                            <div class="item-price" id="price-sahlep">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Dibek Kahvesi <span class="en-title">/ Dibek Coffee</span></div>
-                            <div class="item-price">100 ₺</div>
+                            <div class="item-price" id="price-dibek">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Dağ Çayı <span class="en-title">/ Mountain Tea</span></div>
-                            <div class="item-price">35 ₺</div>
+                            <div class="item-price" id="price-dag-cayi">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Semaver Çayı <span class="en-title">/ Samovar Tea</span></div>
-                            <div class="item-price">500 ₺</div>
+                            <div class="item-price" id="price-semaver">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Espresso <span class="en-title">/ Espresso</span></div>
-                            <div class="item-price">--- ₺</div>
+                            <div class="item-price" id="price-espresso">...</div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Sağ Bölüm -->
                 <div class="menu-column">
                     <h2 class="category-title">ÇORBA <span class="en-cat">/ Soup</span></h2>
                     <div class="menu-item">
                         <div class="menu-item-header">
                             <div class="item-title">Mercimek <span class="en-title">/ Lentil</span></div>
-                            <div class="item-price">150 ₺</div>
+                            <div class="item-price" id="price-mercimek">...</div>
                         </div>
                         <div class="item-desc">Süzme mercimeğin tereyağlı sosla buluştuğu, içinizi ısıtacak geleneksel lezzet.</div>
                         <div class="item-desc english">A traditional, warming dish where strained lentils meet a buttery sauce.</div>
@@ -304,7 +308,7 @@
                     <div class="menu-item">
                         <div class="menu-item-header">
                             <div class="item-title">Günün Çorbası <span class="en-title">/ Soup of the Day</span></div>
-                            <div class="item-price">150 ₺</div>
+                            <div class="item-price" id="price-gunun-corbasi">...</div>
                         </div>
                         <div class="item-desc">Şefimizin taze malzemelerle hazırladığı günlük sürpriz başlangıç.</div>
                         <div class="item-desc english">Our chef's daily surprise starter, prepared with fresh ingredients.</div>
@@ -314,49 +318,49 @@
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Kola <span class="en-title">/ Coke</span></div>
-                            <div class="item-price">90 ₺</div>
+                            <div class="item-price" id="price-kola">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Fanta <span class="en-title">/ Fanta</span></div>
-                            <div class="item-price">90 ₺</div>
+                            <div class="item-price" id="price-fanta">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Su <span class="en-title">/ Water</span></div>
-                            <div class="item-price">40 ₺</div>
+                            <div class="item-price" id="price-su">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Meyve Suyu <span class="en-title">/ Fruit Juice</span></div>
-                            <div class="item-price">60 ₺</div>
+                            <div class="item-price" id="price-meyve-suyu">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Şalgam <span class="en-title">/ Turnip</span></div>
-                            <div class="item-price">60 ₺</div>
+                            <div class="item-price" id="price-salgam">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Ayran <span class="en-title">/ Ayran</span></div>
-                            <div class="item-price">45 ₺</div>
+                            <div class="item-price" id="price-ayran">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Gazoz <span class="en-title">/ Soda</span></div>
-                            <div class="item-price">85 ₺</div>
+                            <div class="item-price" id="price-gazoz">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Ice Tea <span class="en-title">/ Ice Tea</span></div>
-                            <div class="item-price">90 ₺</div>
+                            <div class="item-price" id="price-ice-tea">...</div>
                         </div>
                     </div>
 
@@ -364,46 +368,42 @@
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Cappuccino <span class="en-title">/ Cappuccino</span></div>
-                            <div class="item-price">--- ₺</div>
+                            <div class="item-price" id="price-cappuccino">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Latte <span class="en-title">/ Latte</span></div>
-                            <div class="item-price">--- ₺</div>
+                            <div class="item-price" id="price-latte">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Mocha <span class="en-title">/ Mocha</span></div>
-                            <div class="item-price">--- ₺</div>
+                            <div class="item-price" id="price-mocha">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Sıcak Çikolata <span class="en-title">/ Hot Chocolate</span></div>
-                            <div class="item-price">--- ₺</div>
+                            <div class="item-price" id="price-sicak-cikolata">...</div>
                         </div>
                     </div>
                     <div class="menu-item compact">
                         <div class="menu-item-header">
                             <div class="item-title">Türk Kahvesi <span class="en-title">/ Turkish Coffee</span></div>
-                            <div class="item-price">100 ₺</div>
+                            <div class="item-price" id="price-turk-kahvesi">...</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- 2. YATAY BANNER GÖRSELİ -->
         <div class="horizontal-banner">
             <img src="izgara-banner.jpg" alt="Izgara Lezzetleri">
         </div>
 
-    </div> <!-- Ana Menü Çerçevesi Bitiş -->
-
-    <!-- 4. SAYFA: Ahşap Logo Çıkış ve Yazılı Başlık -->
-    <section class="page-section logo-page" id="goodbye-page">
+    </div> <section class="page-section logo-page" id="goodbye-page">
         <div class="text-logo-container">
             <img src="logo-Photoroom.png" alt="Dağ Restoran Since 1992" class="vintage-logo">
             <div class="text-left">
@@ -419,5 +419,28 @@
         </div>
     </section>
 
+    <a href="https://wa.me/905336311224" class="whatsapp-float" target="_blank" rel="noopener noreferrer" title="WhatsApp ile İletişime Geçin">
+        <svg viewBox="0 0 32 32" width="32" height="32">
+            <path fill="#FFF" d="M16.01 2.01c-7.72 0-14 6.28-14 14 0 2.45.63 4.8 1.83 6.91L2.01 30l7.25-1.9c2.05 1.12 4.35 1.71 6.75 1.71 7.72 0 14-6.28 14-14s-6.28-14-14-14zM16.01 28.18c-2.07 0-4.1-.55-5.88-1.6l-.42-.25-4.37 1.15 1.17-4.27-.27-.43c-1.15-1.83-1.76-3.95-1.76-6.14 0-6.83 5.56-12.39 12.39-12.39s12.39 5.56 12.39 12.39-5.56 12.39-12.39 12.39zM22.8 20.31c-.37-.19-2.21-1.09-2.55-1.22-.34-.12-.59-.19-.84.19-.25.37-.96 1.22-1.18 1.47-.22.25-.43.28-.8.09-1.57-.79-2.67-1.46-3.75-2.77-.28-.34.31-.31.67-.99.12-.22.06-.41-.03-.6-.09-.19-.84-2.02-1.15-2.77-.3-.73-.6-.63-.84-.64h-.72c-.25 0-.66.09-1.01.47-.34.37-1.31 1.28-1.31 3.12 0 1.84 1.34 3.63 1.53 3.88.19.25 2.65 4.04 6.42 5.58 2.51 1.03 3.42 1.09 4.67.92.98-.13 2.21-.91 2.51-1.78.3-.88.3-1.63.22-1.78-.1-.16-.35-.25-.72-.44z"/>
+        </svg>
+    </a>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('menu.json')
+                .then(response => response.json())
+                .then(data => {
+                    for (const key in data) {
+                        const priceElement = document.getElementById(key);
+                        if (priceElement) {
+                            priceElement.textContent = data[key];
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error("Fiyatlar yüklenirken bir hata oluştu:", error);
+                });
+        });
+    </script>
 </body>
 </html>
