@@ -24,8 +24,7 @@ body {
 
 /* HARBİ AHŞAP DESENİ ARKA PLAN */
 .logo-page {
-    background-color: #3a2111; /* Temel kahverengi */
-    /* Ahşap tahta (plank) görünümü için çizgiler ve gölgelendirmeler */
+    background-color: #3b2313; /* Temel kahverengi */
     background-image: 
         repeating-linear-gradient(
             0deg,
@@ -48,7 +47,7 @@ body {
     width: 100%;
     height: auto;
     border-radius: 50%;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8); /* Ahşap üstünde daha belirgin dursun diye gölge artırıldı */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
 }
 
 /* --- AHŞAP LOGO ÜSTÜ YAZILI LOGO VE PORTRE ALANI --- */
@@ -59,7 +58,7 @@ body {
     color: #f3e5d8; 
     margin-bottom: 40px;
     font-family: 'Georgia', serif; 
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Yazı ahşapta okunsun diye gölge */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
 }
 
 .vintage-logo {
@@ -112,7 +111,7 @@ body {
     margin: 40px auto; 
     background-color: #ffffff; 
     border-radius: 10px; 
-    padding-bottom: 20px; 
+    padding-bottom: 0px; 
     box-shadow: 0 10px 40px rgba(0,0,0,0.08); 
     overflow: hidden; 
 }
@@ -138,7 +137,7 @@ body {
 
 /* Menü İçerik Boşlukları */
 .menu-content-padding {
-    padding: 80px 40px 80px 40px; 
+    padding: 80px 40px 120px 40px; 
 }
 
 /* Menü Sayfası En Üst Yazı (Dağ Restoran) */
@@ -299,11 +298,28 @@ body {
     display: block;
 }
 
+/* İLETİŞİM BİLGİLERİ KISMI */
+.contact-info-section {
+    text-align: center;
+    padding: 25px 40px;
+    background-color: #f8f9fa; 
+    border-top: 2px dashed #b2bec3; 
+    color: #485460;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item strong {
+    color: #2b6b84; 
+}
+
 /* DIŞ MEKAN GEÇİŞ FOTOĞRAFI EFEKTİ */
 .transition-banner {
     width: 100%;
     line-height: 0; 
-    margin: 40px 0 0 0;
+    margin: 0;
     padding: 0;
 }
 
@@ -331,12 +347,38 @@ body {
     justify-content: center;
     transition: transform 0.3s ease;
 }
+.whatsapp-float:hover { transform: scale(1.1); }
 
-.whatsapp-float:hover {
-    transform: scale(1.1);
+/* TELEFON ARAMA YÜZEN BUTON STİLLERİ */
+.phone-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 100px; /* WhatsApp butonunun 10px üstünde hizalanır (30px + 60px + 10px = 100px) */
+    right: 30px;
+    background-color: #007bff; /* Arama için dikkat çekici klasik mavi */
+    border-radius: 50px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
 }
+.phone-float:hover { transform: scale(1.1); }
 
 /* 📱 RESPONSIVE EKRAN AYARLARI */
+@media (min-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .contact-info-section {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
 @media (max-width: 768px) {
     .text-logo-container {
         transform: scale(0.65);
@@ -349,10 +391,15 @@ body {
         bottom: 20px;
         right: 20px;
     }
-    .whatsapp-float svg {
-        width: 26px;
-        height: 26px;
+    .whatsapp-float svg { width: 26px; height: 26px; }
+
+    .phone-float {
+        width: 50px;
+        height: 50px;
+        bottom: 80px; /* Mobilde de uyumlu olması için aralık küçüldü (20px + 50px + 10px = 80px) */
+        right: 20px;
     }
+    .phone-float svg { width: 24px; height: 24px; }
     
     .oval-img {
         max-width: 45%; 
@@ -362,11 +409,5 @@ body {
 
     .transition-banner img {
         height: 250px; 
-    }
-}
-
-@media (min-width: 768px) {
-    .menu-grid {
-        grid-template-columns: 1fr 1fr;
     }
 }
