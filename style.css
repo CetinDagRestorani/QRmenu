@@ -22,8 +22,25 @@ body {
     padding: 60px 40px;
 }
 
+/* HARBİ AHŞAP DESENİ ARKA PLAN */
 .logo-page {
-    background-color: #150d08; 
+    background-color: #3a2111; /* Temel kahverengi */
+    /* Ahşap tahta (plank) görünümü için çizgiler ve gölgelendirmeler */
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 50px,
+            rgba(0,0,0,0.4) 50px,
+            rgba(0,0,0,0.4) 53px
+        ),
+        linear-gradient(
+            to bottom,
+            #4a2f1d,
+            #382112,
+            #2c1a0f,
+            #4a2f1d
+        );
 }
 
 .logo-wrapper img {
@@ -31,7 +48,7 @@ body {
     width: 100%;
     height: auto;
     border-radius: 50%;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8); /* Ahşap üstünde daha belirgin dursun diye gölge artırıldı */
 }
 
 /* --- AHŞAP LOGO ÜSTÜ YAZILI LOGO VE PORTRE ALANI --- */
@@ -42,6 +59,7 @@ body {
     color: #f3e5d8; 
     margin-bottom: 40px;
     font-family: 'Georgia', serif; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Yazı ahşapta okunsun diye gölge */
 }
 
 .vintage-logo {
@@ -94,8 +112,9 @@ body {
     margin: 40px auto; 
     background-color: #ffffff; 
     border-radius: 10px; 
-    padding-bottom: 110px; 
+    padding-bottom: 20px; 
     box-shadow: 0 10px 40px rgba(0,0,0,0.08); 
+    overflow: hidden; 
 }
 
 /* İç Logolar (Beyaz Çerçevenin Köşeleri) */
@@ -119,7 +138,7 @@ body {
 
 /* Menü İçerik Boşlukları */
 .menu-content-padding {
-    padding: 80px 40px 50px 40px; 
+    padding: 80px 40px 80px 40px; 
 }
 
 /* Menü Sayfası En Üst Yazı (Dağ Restoran) */
@@ -232,38 +251,36 @@ body {
     margin-top: 4px;
 }
 
-/* YENİ: BÖLÜM ALTI OVAL RESİM GALERİSİ TASARIMI */
+/* OVAL RESİM GALERİSİ TASARIMI */
 .section-gallery {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    flex-wrap: wrap; /* Mobilde alt alta inmelerini sağlar */
+    gap: 15px;
+    flex-wrap: wrap; 
     width: 100%;
     margin-top: 20px;
-    grid-column: 1 / -1; /* Izgara (grid) içinde tam genişlik kaplaması için */
+    grid-column: 1 / -1; 
 }
 
-/* Sol sütundaki Mezeler altı resimlerin genişliği bozmaması için */
 .column-gallery {
     grid-column: auto; 
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
-/* Resimlere oval (hap) şeklini veren sihirli kısım */
 .oval-img {
     width: 100%;
     max-width: 240px; 
     height: 160px; 
     object-fit: cover; 
-    border-radius: 100px; /* Kenarları tam yuvarlatıp oval şekli verir */
+    border-radius: 100px; 
     box-shadow: 0 10px 20px rgba(0,0,0,0.15); 
     border: 4px solid #ffffff; 
     transition: transform 0.3s ease;
 }
 
 .oval-img:hover {
-    transform: scale(1.05); /* Üzerine tıklarken/dokunurken hafif büyüme efekti */
+    transform: scale(1.05); 
 }
 
 /* YATAY BANNER */
@@ -280,6 +297,22 @@ body {
     width: 100%;
     height: auto; 
     display: block;
+}
+
+/* DIŞ MEKAN GEÇİŞ FOTOĞRAFI EFEKTİ */
+.transition-banner {
+    width: 100%;
+    line-height: 0; 
+    margin: 40px 0 0 0;
+    padding: 0;
+}
+
+.transition-banner img {
+    width: 100%;
+    height: 350px; 
+    object-fit: cover; 
+    display: block;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
 /* WHATSAPP YÜZEN BUTON STİLLERİ */
@@ -322,9 +355,13 @@ body {
     }
     
     .oval-img {
-        max-width: 45%; /* Telefonda yan yana iki oval resim sığması için */
+        max-width: 45%; 
         height: 110px;
         border-radius: 50px;
+    }
+
+    .transition-banner img {
+        height: 250px; 
     }
 }
 
