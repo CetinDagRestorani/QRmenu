@@ -1,0 +1,678 @@
+/* Genel Sıfırlama ve Font Ayarları */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #eef2f5; 
+    color: #2c3e50;
+    overflow-x: hidden;
+}
+
+/* Tam Ekran Bölümler (Ahşap Logolar İçin) */
+.page-section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 40px;
+}
+
+/* HARBİ AHŞAP DESENİ ARKA PLAN */
+.logo-page {
+    background-color: #3b2313; /* Temel kahverengi */
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 50px,
+            rgba(0,0,0,0.4) 50px,
+            rgba(0,0,0,0.4) 53px
+        ),
+        linear-gradient(
+            to bottom,
+            #4a2f1d,
+            #382112,
+            #2c1a0f,
+            #4a2f1d
+        );
+}
+
+.logo-wrapper img {
+    max-width: 380px;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+}
+
+/* --- AHŞAP LOGO ÜSTÜ YAZILI LOGO VE PORTRE ALANI --- */
+.text-logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f3e5d8; 
+    margin-bottom: 40px;
+    font-family: 'Georgia', serif; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+}
+
+.vintage-logo {
+    height: 85px; 
+    width: auto;
+    margin-right: 20px;
+    filter: brightness(0) invert(0.9) sepia(0.1) hue-rotate(350deg);
+}
+
+.text-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    margin-right: 15px;
+}
+
+.text-cetin {
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+.text-slogan {
+    font-size: 16px;
+    font-style: italic;
+    opacity: 0.85;
+    margin-top: 5px;
+}
+
+.text-divider {
+    font-size: 65px;
+    font-weight: 300;
+    opacity: 0.5;
+    margin: 0 10px;
+    line-height: 1;
+}
+
+.text-right {
+    font-size: 42px;
+    font-weight: normal;
+    margin-left: 15px;
+    letter-spacing: 1px;
+}
+
+/* ANA MENÜ ÇERÇEVESİ (BEYAZ SAYFA) */
+.main-menu-container {
+    position: relative; 
+    max-width: 1200px;
+    margin: 40px auto; 
+    background-color: #ffffff; 
+    border-radius: 10px; 
+    padding-bottom: 0px; 
+    box-shadow: 0 10px 40px rgba(0,0,0,0.08); 
+    overflow: hidden; 
+}
+
+/* İç Logolar (Beyaz Çerçevenin Köşeleri) */
+.inner-logo {
+    position: absolute;
+    width: 110px;
+    height: auto;
+    z-index: 10;
+    opacity: 0.85;
+}
+
+.top-left {
+    top: 20px;
+    left: 20px;
+}
+
+.bottom-right {
+    bottom: 20px;
+    right: 20px; 
+}
+
+/* Menü İçerik Boşlukları */
+.menu-content-padding {
+    padding: 80px 40px 120px 40px; 
+}
+
+/* Menü Sayfası En Üst Yazı (Dağ Restoran) */
+.menu-top-brand {
+    text-align: center;
+    color: #2c3e50; 
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+/* Menü Başlıkları (Kesikli Çizgi Üstte) */
+.menu-header-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    border-top: 2px dashed #b2bec3; 
+    padding-top: 30px; 
+}
+
+.main-page-title {
+    color: #2b6b84;
+    font-size: 36px;
+    letter-spacing: 4px;
+    display: inline-block;
+}
+
+.category-title {
+    color: #2b6b84;
+    font-size: 24px;
+    margin: 20px 0;
+    border-bottom: 2px solid #eef2f5;
+    padding-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.en-cat {
+    font-size: 14px;
+    color: #7f8c8d;
+    font-weight: normal;
+}
+
+/* Çift Sütun Izgara Yapısı */
+.menu-grid {
+    display: grid;
+    grid-template-columns: 100%; 
+    gap: 40px;
+    width: 100%;
+}
+
+.menu-column {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Menü Ürün Kartları (Düz Mavi Alt Çizgi) */
+.menu-item {
+    border-bottom: 1px solid #2b6b84; 
+    padding-bottom: 15px;
+}
+
+.menu-item.compact {
+    padding-bottom: 8px;
+    margin-bottom: -5px;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.item-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1e272e;
+}
+
+.en-title {
+    font-size: 13px;
+    color: #7f8c8d;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.item-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2b6b84;
+    white-space: nowrap;
+    background-color: #f8f9fa;
+    padding: 3px 12px;
+    border-radius: 6px;
+    border: 1px solid #e1e8ed;
+}
+
+/* Açıklama Kısımları */
+.item-desc {
+    font-size: 13.5px;
+    color: #485460;
+    line-height: 1.5;
+}
+
+.item-desc.english {
+    color: #808e9b;
+    font-style: italic;
+    margin-top: 4px;
+}
+
+/* OVAL RESİM GALERİSİ TASARIMI */
+.section-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap; 
+    width: 100%;
+    margin-top: 20px;
+    grid-column: 1 / -1; 
+}
+
+.column-gallery {
+    grid-column: auto; 
+    margin-bottom: 20px;
+}
+
+.oval-img {
+    width: 100%;
+    max-width: 240px; 
+    height: 160px; 
+    object-fit: cover; 
+    border-radius: 100px; 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15); 
+    border: 4px solid #ffffff; 
+    transition: transform 0.3s ease;
+}
+
+.oval-img:hover {
+    transform: scale(1.20); /* Eski değer 1.05'ti, şimdi çok daha fazla büyüyecek */
+    z-index: 10; /* Büyüdüğünde diğer resimlerin veya yazıların altında kalmaması için üste alıyoruz */
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3); /* Büyüdüğünde gölgesi de artsın */
+}
+
+.oval-img:active {
+    transform: scale(1.30); /* Basılı tutarken en büyük haline gelir */
+}
+
+/* YATAY BANNER */
+.horizontal-banner {
+    width: 100%; 
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+}
+
+.horizontal-banner img {
+    width: 100%;
+    height: auto; 
+    display: block;
+}
+
+/* İLETİŞİM BİLGİLERİ KISMI */
+.contact-info-section {
+    text-align: center;
+    /* Mobilde yazıların logonun altında kalmaması için alt padding değerini 80px yaptık */
+    padding: 25px 40px 80px 40px; 
+    background-color: #f8f9fa; 
+    border-top: 2px dashed #b2bec3; 
+    color: #485460;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-item strong {
+    color: #2b6b84; 
+}
+
+/* DIŞ MEKAN GEÇİŞ FOTOĞRAFI EFEKTİ */
+.transition-banner {
+    width: 100%;
+    line-height: 0; 
+    margin: 0;
+    padding: 0;
+}
+
+.transition-banner img {
+    width: 100%;
+    height: 350px; 
+    object-fit: cover; 
+    display: block;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* WHATSAPP YÜZEN BUTON STİLLERİ */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    border-radius: 50px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+.whatsapp-float:hover { transform: scale(1.1); }
+
+/* TELEFON ARAMA YÜZEN BUTON STİLLERİ */
+.phone-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 100px; /* WhatsApp butonunun 10px üstünde hizalanır (30px + 60px + 10px = 100px) */
+    right: 30px;
+    background-color: #007bff; /* Arama için dikkat çekici klasik mavi */
+    border-radius: 50px;
+    box-shadow: 2px 2px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+.phone-float:hover { transform: scale(1.1); }
+
+/* 📱 RESPONSIVE EKRAN AYARLARI */
+@media (min-width: 768px) {
+    .menu-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .contact-info-section {
+        flex-direction: row;
+        justify-content: space-around;
+        padding-bottom: 25px; 
+        padding-right: 140px; 
+    }
+}
+
+@media (max-width: 768px) {
+    .text-logo-container {
+        transform: scale(0.65);
+        margin-bottom: 15px;
+    }
+    
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        bottom: 20px;
+        right: 20px;
+    }
+    .whatsapp-float svg { width: 26px; height: 26px; }
+
+    .phone-float {
+        width: 50px;
+        height: 50px;
+        bottom: 80px; /* Mobilde de uyumlu olması için aralık küçüldü (20px + 50px + 10px = 80px) */
+        right: 20px;
+    }
+    .phone-float svg { width: 24px; height: 24px; }
+    
+    .oval-img {
+        max-width: 45%; 
+        height: 110px;
+        border-radius: 50px;
+    }
+
+    .transition-banner img {
+        height: 250px; 
+    }
+}
+
+
+/* --- YUKARI KAYDIRINCA BELİREN ÜST MENÜ --- */
+.sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 35px;
+    
+    /* Ahşap Deseni Arka Planı */
+    background-color: #3b2313; 
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 50px,
+            rgba(0,0,0,0.4) 50px,
+            rgba(0,0,0,0.4) 53px
+        ),
+        linear-gradient(
+            to bottom,
+            #4a2f1d,
+            #382112,
+            #2c1a0f,
+            #4a2f1d
+        );
+        
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    z-index: 2000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 20px;
+    transform: translateY(-100%); 
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Javascript ile 'show' sınıfı eklendiğinde menü aşağı kayarak görünür */
+.sticky-nav.show {
+    transform: translateY(0);
+}
+
+/* --- KÜÇÜLTÜLMÜŞ HAMBURGER İKONU --- */
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20px; /* Daha küçük ve zarif genişlik */
+    height: 14px; /* Daha küçük yükseklik */
+    cursor: pointer;
+}
+
+.hamburger-menu span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #f3e5d8; /* Açık krem rengi */
+    border-radius: 2px;
+    transition: background-color 0.3s;
+}
+
+.hamburger-menu:hover span {
+    background-color: #ffffff;
+}
+
+/* --- SAĞDAN AÇILAN YAN MENÜ TASARIMI --- */
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -150px;
+    width: 150px;
+    height: 100vh;
+    
+    /* Ahşap Deseni Arka Planı */
+    background-color: #3b2313; 
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 50px,
+            rgba(0,0,0,0.4) 50px,
+            rgba(0,0,0,0.4) 53px
+        ),
+        linear-gradient(
+            to bottom,
+            #4a2f1d,
+            #382112,
+            #2c1a0f,
+            #4a2f1d
+        );
+        
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    z-index: 3000; 
+    transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Menü açıldığında çalışacak sınıf */
+.side-menu.open {
+    right: 0; 
+}
+
+/* Kapatma Butonu (X) */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    color: #f3e5d8; /* Açık krem rengi */
+    cursor: pointer;
+    line-height: 1;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.close-btn:hover {
+    transform: scale(1.1) rotate(90deg);
+    color: #ffffff;
+}
+
+/* Menü Linkleri */
+.side-menu-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.side-menu-links li {
+    margin-bottom: 25px;
+}
+
+.side-menu-links a {
+    text-decoration: none;
+    color: #f3e5d8; /* Açık krem rengi */
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: color 0.3s;
+}
+
+.side-menu-links a:hover {
+    color: #ffffff;
+}
+/* --- ARKAPLAN KARARTMA (OVERLAY) --- */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 2500; /* Menünün altında, sitenin üstünde */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s;
+}
+
+/* Overlay açıldığında çalışacak sınıf */
+.menu-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Dış mekan resminin üstüne gelince tıklanabilir olduğunu belli et */
+.transition-banner img {
+    width: 100%;
+    /* Sabit 350px yerine ekran yüksekliğine göre oranlıyoruz */
+    height: 60vh; /* Ekran yüksekliğinin %60'ı kadar yer kaplar */
+    max-height: 600px; /* Çok büyük ekranlarda aşırı uzamasını engeller */
+    
+    object-fit: cover;
+    object-position: center center; /* Resmin kesilirken her zaman tam ortasına odaklanmasını sağlar */
+    display: block;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    
+    /* Tıklama efekti ayarları */
+    cursor: pointer;
+    transition: filter 0.3s;
+}
+.transition-banner img:hover {
+    filter: brightness(0.8);
+}
+
+/* --- TAM EKRAN AÇILIR GALERİ (LIGHTBOX) --- */
+.lightbox {
+    display: none; /* Başlangıçta gizlidir */
+    position: fixed;
+    z-index: 5000; /* Her şeyin üstünde olsun */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9); /* Arka planı koyulaştır */
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.lightbox.show {
+    display: flex; /* JS ile show sınıfı eklendiğinde görünür */
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    object-fit: contain;
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {transform: scale(0.8); opacity: 0;}
+    to {transform: scale(1); opacity: 1;}
+}
+
+/* Çarpı, İleri ve Geri Butonları */
+.lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #f1f1f1;
+    font-size: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 5001;
+}
+
+.lightbox-prev, .lightbox-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 10px 14px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px; 
+    transition: 0.3s;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 5px;
+    z-index: 5001;
+}
+
+.lightbox-prev { left: 15px; }
+.lightbox-next { right: 15px; }
+
+.lightbox-close:hover, .lightbox-prev:hover, .lightbox-next:hover {
+    background-color: rgba(255,255,255,0.2);
+    color: #fff;
+}
